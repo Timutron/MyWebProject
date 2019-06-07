@@ -9,6 +9,8 @@
         <ul>
             <li id="вход"><a href="login">ВХОД</a></li>
             <li id="регистрация"><a href="registration">РЕГИСТРАЦИЯ</a></li>
+            <a href="userPage">User</a>
+            <a href="adminPage">Admin</a>
         </ul>
     </body>
 </html>

@@ -11,7 +11,7 @@ public class PageController {
         return "registration";
     }
 
-    @GetMapping("/homePage")
+    @GetMapping({"/", "/homePage"})
     public String homePage(){
         return "homePage";
     }
