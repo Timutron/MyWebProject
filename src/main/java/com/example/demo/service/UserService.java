@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.DAO.IUserDAO;
+import com.example.demo.repository.UserRepo;
 import com.example.demo.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class UserService implements IUserService {
 
     @Autowired
-    private IUserDAO iUserDAO;
+    private UserRepo userRepo;
 
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -19,11 +19,11 @@ public class UserService implements IUserService {
     public void save(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setRole("USER");
-        iUserDAO.save(user);
+        userRepo.save(user);
     }
 
     @Override
     public User findByLogin(String login) {
-        return iUserDAO.findByLogin(login);
+        return userRepo.findByLogin(login);
     }
 }
