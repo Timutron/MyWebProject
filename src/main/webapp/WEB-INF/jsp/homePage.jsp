@@ -11,6 +11,8 @@
             <li id="регистрация"><a href="registration">РЕГИСТРАЦИЯ</a></li>
             <a href="userPage">User</a>
             <a href="adminPage">Admin</a>
+            <a href="upload">загрузить</a>
         </ul>
+
     </body>
 </html>
